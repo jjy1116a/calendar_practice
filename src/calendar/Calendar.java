@@ -21,12 +21,18 @@ public class Calendar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		System.out.println("달을 입력하세요");
-		int month = sc.nextInt();
 		Calendar cal = new Calendar();
+		System.out.println("반복 횟수를 입력하세요");
+		int repeat = sc.nextInt();
+		int[] answer = new int[repeat];
+		System.out.println("월을 입력하세요");
+		for(int i = 0; i < repeat; i++) {
+			answer[i] = sc.nextInt();
+		}
+		for(int i = 0; i < repeat; i++) {
+			System.out.println(answer[i] + "월은 " + cal.getMaxDaysOfMonth(answer[i]) + "일 까지 있습니다.");
+		}
 		
-		System.out.println(month + "월은 " + cal.getMaxDaysOfMonth(month) + "일 까지 있습니다.");
-		cal.printSampleOfCalendar();
 		sc.close();
 	}
 
